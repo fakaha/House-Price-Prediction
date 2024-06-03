@@ -8,7 +8,7 @@ import streamlit as st
 
 st.write("""
 # Simple House Price Prediction
-by Zulfa Fakaha 21.11.4337
+         by Zulfa Fakaha 21.11.4337
 
 Predicting house prices based on features such as square footage, number of bathrooms, bedrooms, and floors.
 """)
