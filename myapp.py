@@ -16,12 +16,6 @@ Predicting house prices based on features such as square footage, number of bath
 # Load the dataset
 df = pd.read_csv("DataHargaRumah.csv")
 
-# Feature engineering
-# df['age'] = 2024 - df['year_built']
-# df['bath_bed_ratio'] = df['bathrooms'] / df['bedrooms']
-
-# Selecting features and target
-# X = df[['sqft_living', 'bathrooms', 'bedrooms', 'floors', 'age', 'bath_bed_ratio']]
 X = df[['sqft_living', 'bathrooms', 'bedrooms', 'floors']]
 y = df['price']
 
@@ -40,10 +34,10 @@ def predict_price(sqft_living, bathrooms, bedrooms, floors):
 
 # st.sidebar.header('Input Features')
 
-sqft_living = st.sidebar.number_input('Square Footage', min_value=50, max_value=10000, value=1000, step=50)
-bathrooms = st.sidebar.slider('Number of Bathrooms', min_value=1, max_value=10, value=2, step=1)
-bedrooms = st.sidebar.slider('Number of Bedrooms', min_value=1, max_value=10, value=4, step=1)
-floors = st.sidebar.slider('Number of Floors', min_value=1, max_value=5, value=1, step=1)
+sqft_living = st.sidebar.number_input('Luas tanah', min_value=50, max_value=10000, value=1000, step=50)
+bathrooms = st.sidebar.slider('Jumlah kamar mandi', min_value=1, max_value=10, value=2, step=1)
+bedrooms = st.sidebar.slider('Jumlah kamar tidur', min_value=1, max_value=10, value=4, step=1)
+floors = st.sidebar.slider('Jumlah lantai', min_value=1, max_value=5, value=1, step=1)
 
 # predicted_price = predict_price(sqft_living, bathrooms, bedrooms, floors)
 
